@@ -244,6 +244,8 @@ applet/
 │   └── admin/                     # 后台/工具型模板
 ├── docs/                          # 文档站（VitePress）
 ├── examples/                      # 示例工程
+├── pm/                            # 项目管理工件（roadmap / risks / ADR / RFC / backlog）
+├── .cursor/                       # Cursor AI 协作配置（skills 等）
 ├── .github/workflows/             # CI 配置
 ├── pnpm-workspace.yaml
 ├── package.json
@@ -323,8 +325,10 @@ basic-react/
 
 ## 协作
 
-- 提案变更请提交 RFC PR 到 `docs/rfcs/`。
+- **项目管理工件**统一放在 [`pm/`](./pm/README.md)：里程碑（`pm/roadmap.md`）、风险（`pm/risks.md`）、决策（`pm/decisions/`）、提案（`pm/rfcs/`）、需求池（`pm/backlog.md`）。
+- 提案变更请基于 `pm/templates/rfc.md` 在 `pm/rfcs/` 下提交 PR；评审通过后落地为 ADR（`pm/decisions/`）。
 - 任何实现以本 README 的方案为准；调整需同步更新本文件。
+- AI Agent 协助维护 PM 工件时，请遵循 `.cursor/skills/pm-workflow/SKILL.md`。
 
 > 当前状态：**📝 方案规划阶段（v0.2 草案，关键决策已锁定）**，欢迎讨论与补充。
 >
