@@ -8,15 +8,15 @@
 
 ## 风险一览
 
-| ID    | 风险描述                                                 | 影响   | 概率   | 状态        | 责任人 | 缓解措施                                                  | 关联 |
-| ----- | -------------------------------------------------------- | ------ | ------ | ----------- | ------ | --------------------------------------------------------- | ---- |
-| R-001 | 跨端原生 API 差异（Bluetooth / NFC / 文件系统等）          | High   | High   | `Open`     | TBD    | 制定「有损兼容」白名单 + 不支持时显式抛错；写入 ADR     |      |
-| R-002 | 微信主包 2MB 限制                                        | High   | Medium | `Open`     | TBD    | 默认 Tree-shaking + 按需引入 + 分包；CI 阶段卡包体积阈值 |      |
-| R-003 | Vite / Webpack 双轨期插件兼容                            | Medium | Medium | `Open`     | TBD    | 锁定 Taro 4.x 最小可用版本；为不兼容平台保留 webpack 配置 |      |
-| R-004 | UI 组件库（NutUI / Taroify）跨端渲染差异                | Medium | High   | `Open`     | TBD    | 评估「平台无关组件层」必要性；建立视觉回归基线           |      |
-| R-005 | Vue3 / uni-app 路线维护成本                              | Medium | Low    | `Accepted` | —      | v1.x 仅做 Taro+React，v2.0 再开第二轨                    | ADR-0001 |
-| R-006 | CLI 模板分发：内置（体积大）vs 远程拉取（依赖网络）      | Low    | Medium | `Open`     | TBD    | 倾向远程 degit + 本地缓存；M1 决策                       |      |
-| R-007 | 第三方依赖授权与商用                                     | Low    | Low    | `Open`     | TBD    | MIT 主协议 + 文档明确声明上游协议                         |      |
+| ID    | 风险描述                                            | 影响   | 概率   | 状态       | 责任人 | 缓解措施                                                  | 关联     |
+| ----- | --------------------------------------------------- | ------ | ------ | ---------- | ------ | --------------------------------------------------------- | -------- |
+| R-001 | 跨端原生 API 差异（Bluetooth / NFC / 文件系统等）   | High   | High   | `Open`     | TBD    | 制定「有损兼容」白名单 + 不支持时显式抛错；写入 ADR       |          |
+| R-002 | 微信主包 2MB 限制                                   | High   | Medium | `Open`     | TBD    | 默认 Tree-shaking + 按需引入 + 分包；CI 阶段卡包体积阈值  |          |
+| R-003 | Vite / Webpack 双轨期插件兼容                       | Medium | Medium | `Open`     | TBD    | 锁定 Taro 4.x 最小可用版本；为不兼容平台保留 webpack 配置 |          |
+| R-004 | UI 组件库（NutUI / Taroify）跨端渲染差异            | Medium | High   | `Open`     | TBD    | 评估「平台无关组件层」必要性；建立视觉回归基线            |          |
+| R-005 | Vue3 / uni-app 路线维护成本                         | Medium | Low    | `Accepted` | —      | v1.x 仅做 Taro+React，v2.0 再开第二轨                     | ADR-0001 |
+| R-006 | CLI 模板分发：内置（体积大）vs 远程拉取（依赖网络） | Low    | Medium | `Open`     | TBD    | 倾向远程 degit + 本地缓存；M1 决策                        |          |
+| R-007 | 第三方依赖授权与商用                                | Low    | Low    | `Open`     | TBD    | MIT 主协议 + 文档明确声明上游协议                         |          |
 
 ## 处置流程
 

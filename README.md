@@ -41,21 +41,19 @@
 
 ## 二、覆盖平台
 
-
-| 平台       | 标识               | 优先级    | 备注                |
-| -------- | ---------------- | ------ | ----------------- |
-| 微信小程序    | `weapp`          | **P0** | 主战场，必须支持          |
-| H5       | `h5`             | **P0** | 用于浏览器分享与调试        |
-| 支付宝小程序   | `alipay`         | **P0** | 金融/政务场景           |
-| 抖音小程序    | `tt`             | **P0** | 字节系（含今日头条/西瓜）     |
-| 百度智能小程序  | `swan`           | P1     |                   |
-| QQ 小程序   | `qq`             | P1     |                   |
-| 京东小程序    | `jd`             | P2     |                   |
-| 钉钉小程序    | `dd`             | P2     | 企业 OA 场景          |
-| 飞书小程序    | `lark`           | P2     | 企业 OA 场景          |
-| 快手小程序    | `ks`             | P3     |                   |
-| App (RN) | `rn` / `harmony` | P3     | 通过 Taro RN 端或鸿蒙输出 |
-
+| 平台           | 标识             | 优先级 | 备注                      |
+| -------------- | ---------------- | ------ | ------------------------- |
+| 微信小程序     | `weapp`          | **P0** | 主战场，必须支持          |
+| H5             | `h5`             | **P0** | 用于浏览器分享与调试      |
+| 支付宝小程序   | `alipay`         | **P0** | 金融/政务场景             |
+| 抖音小程序     | `tt`             | **P0** | 字节系（含今日头条/西瓜） |
+| 百度智能小程序 | `swan`           | P1     |                           |
+| QQ 小程序      | `qq`             | P1     |                           |
+| 京东小程序     | `jd`             | P2     |                           |
+| 钉钉小程序     | `dd`             | P2     | 企业 OA 场景              |
+| 飞书小程序     | `lark`           | P2     | 企业 OA 场景              |
+| 快手小程序     | `ks`             | P3     |                           |
+| App (RN)       | `rn` / `harmony` | P3     | 通过 Taro RN 端或鸿蒙输出 |
 
 > ✅ **v1.0 范围已确认**：覆盖 P0 共 4 端（微信 / H5 / 支付宝 / 抖音）。
 > P1/P2/P3 视需求逐步补齐。
@@ -66,16 +64,14 @@
 
 ### 3.1 跨端框架对比
 
-
-| 维度         | **Taro 4.x**            | **uni-app x**   | **Mpx**   |
-| ---------- | ----------------------- | --------------- | --------- |
-| 主语法        | React / Vue3 / 原生 React | Vue3 / Vue2     | 增强版小程序原生  |
-| 平台覆盖       | 全平台 + RN + 鸿蒙           | 全平台 + App (uts) | 全平台       |
-| 生态         | 京东 + 社区，活跃              | DCloud 商业化，活跃   | 滴滴主导，稳健   |
-| 性能         | 编译时 + 运行时混合             | 自研运行时，性能优       | 接近原生，性能最优 |
-| 学习曲线       | 低（React 开发者）            | 低（Vue 开发者）      | 中         |
-| TypeScript | 一流支持                    | 良好              | 良好        |
-
+| 维度       | **Taro 4.x**              | **uni-app x**       | **Mpx**            |
+| ---------- | ------------------------- | ------------------- | ------------------ |
+| 主语法     | React / Vue3 / 原生 React | Vue3 / Vue2         | 增强版小程序原生   |
+| 平台覆盖   | 全平台 + RN + 鸿蒙        | 全平台 + App (uts)  | 全平台             |
+| 生态       | 京东 + 社区，活跃         | DCloud 商业化，活跃 | 滴滴主导，稳健     |
+| 性能       | 编译时 + 运行时混合       | 自研运行时，性能优  | 接近原生，性能最优 |
+| 学习曲线   | 低（React 开发者）        | 低（Vue 开发者）    | 中                 |
+| TypeScript | 一流支持                  | 良好                | 良好               |
 
 ✅ **已确认方案：v1.0 锁定 Taro 4.x + React 18 + TypeScript 5**。
 
@@ -122,7 +118,7 @@
 
 - `packages/cli`：脚手架核心
 - `packages/create-applet`：`npm init` 入口
-- `templates/`*：各类模板
+- `templates/`\*：各类模板
 - `packages/*`：可复用业务能力包
 
 ---
@@ -148,14 +144,14 @@ npx create-applet@latest my-app \
 
 ```ts
 const answers = await prompt([
-  { name: 'name',       type: 'input',    message: '项目名称？' },
-  { name: 'template',   type: 'list',     choices: ['basic', 'ecommerce', 'content', 'admin'] },
-  { name: 'framework',  type: 'list',     choices: ['react', 'vue3'] },
-  { name: 'platforms',  type: 'checkbox', choices: PLATFORMS, default: ['weapp', 'h5'] },
-  { name: 'ui',         type: 'list',     choices: ['nutui', 'taroify', 'none'] },
-  { name: 'features',   type: 'checkbox', choices: ['i18n', 'tracker', 'sentry', 'mock', 'pwa'] },
-  { name: 'pm',         type: 'list',     choices: ['pnpm', 'yarn', 'npm'] },
-  { name: 'git',        type: 'confirm',  message: '初始化 git？' },
+  { name: 'name', type: 'input', message: '项目名称？' },
+  { name: 'template', type: 'list', choices: ['basic', 'ecommerce', 'content', 'admin'] },
+  { name: 'framework', type: 'list', choices: ['react', 'vue3'] },
+  { name: 'platforms', type: 'checkbox', choices: PLATFORMS, default: ['weapp', 'h5'] },
+  { name: 'ui', type: 'list', choices: ['nutui', 'taroify', 'none'] },
+  { name: 'features', type: 'checkbox', choices: ['i18n', 'tracker', 'sentry', 'mock', 'pwa'] },
+  { name: 'pm', type: 'list', choices: ['pnpm', 'yarn', 'npm'] },
+  { name: 'git', type: 'confirm', message: '初始化 git？' },
 ]);
 ```
 
@@ -206,20 +202,20 @@ const answers = await prompt([
 
 ## 七、工程化与规范
 
+| 类别      | 工具                                             |
+| --------- | ------------------------------------------------ |
+| 类型检查  | TypeScript 5 + `tsc --noEmit` pre-push           |
+| 代码风格  | ESLint（@typescript-eslint + react/vue 插件）    |
+| 格式化    | Prettier + EditorConfig                          |
+| Git Hooks | Husky + lint-staged                              |
+| 提交规范  | Commitlint（Conventional Commits）+ commitizen   |
+| 版本管理  | Changesets（monorepo 友好）                      |
+| 单元测试  | Vitest + @testing-library                        |
+| E2E       | Playwright（H5）+ 平台官方 IDE 自动化（小程序）  |
+| CI/CD     | GitHub Actions：lint → test → build → 多端预览码 |
+| 发布      | 微信 miniprogram-ci / 支付宝 minidev / 自动上传  |
 
-| 类别        | 工具                                           |
-| --------- | -------------------------------------------- |
-| 类型检查      | TypeScript 5 + `tsc --noEmit` pre-push       |
-| 代码风格      | ESLint（@typescript-eslint + react/vue 插件）    |
-| 格式化       | Prettier + EditorConfig                      |
-| Git Hooks | Husky + lint-staged                          |
-| 提交规范      | Commitlint（Conventional Commits）+ commitizen |
-| 版本管理      | Changesets（monorepo 友好）                      |
-| 单元测试      | Vitest + @testing-library                    |
-| E2E       | Playwright（H5）+ 平台官方 IDE 自动化（小程序）            |
-| CI/CD     | GitHub Actions：lint → test → build → 多端预览码   |
-| 发布        | 微信 miniprogram-ci / 支付宝 minidev / 自动上传       |
-
+> **当前仓库已落实：** pnpm workspace、`@applet/config`（ESLint flat + Prettier + Commitlint）、Husky + lint-staged、GitHub Actions `ci.yml`（`lint` / `format:check` / `typecheck` / `build`）。本地：`pnpm install` 后执行 `pnpm run lint` / `pnpm run typecheck` / `pnpm run build`。
 
 ---
 
@@ -283,18 +279,16 @@ basic-react/
 
 ## 九、里程碑与排期
 
-
-| 阶段  | 目标                               | 预计周期  | 关键交付                               |
-| --- | -------------------------------- | ----- | ---------------------------------- |
-| M0  | 仓库初始化 & monorepo 骨架              | 0.5 周 | pnpm workspace、CI、文档站雏形            |
-| M1  | CLI MVP + `basic-react` 模板       | 1.5 周 | `npx create-applet` 可用，支持 weapp/h5 |
-| M2  | 工程化基线 + 共享包（request/auth）        | 1 周   | 封装完成，模板接入                          |
-| M3  | UI 组件库接入 + 多端适配验证                | 1 周   | NutUI/Taroify 按平台切换，样式一致性测试        |
-| M4  | 扩展平台：alipay + tt（v1.0 全部 P0 端到位） | 1 周   | 四端（weapp/h5/alipay/tt）冒烟通过         |
-| M5  | 业务模板：ecommerce / content / admin | 2 周   | 三类业务模板完成                           |
-| M6  | 监控/埋点/国际化等可选能力                   | 1 周   | 通过 CLI flag 一键启用                   |
-| M7  | 文档站 + 视频教程 + v1.0 发布             | 1 周   | docs.applet.dev 上线，npm 正式版         |
-
+| 阶段 | 目标                                         | 预计周期 | 关键交付                                 |
+| ---- | -------------------------------------------- | -------- | ---------------------------------------- |
+| M0   | 仓库初始化 & monorepo 骨架                   | 0.5 周   | pnpm workspace、CI、文档站雏形           |
+| M1   | CLI MVP + `basic-react` 模板                 | 1.5 周   | `npx create-applet` 可用，支持 weapp/h5  |
+| M2   | 工程化基线 + 共享包（request/auth）          | 1 周     | 封装完成，模板接入                       |
+| M3   | UI 组件库接入 + 多端适配验证                 | 1 周     | NutUI/Taroify 按平台切换，样式一致性测试 |
+| M4   | 扩展平台：alipay + tt（v1.0 全部 P0 端到位） | 1 周     | 四端（weapp/h5/alipay/tt）冒烟通过       |
+| M5   | 业务模板：ecommerce / content / admin        | 2 周     | 三类业务模板完成                         |
+| M6   | 监控/埋点/国际化等可选能力                   | 1 周     | 通过 CLI flag 一键启用                   |
+| M7   | 文档站 + 视频教程 + v1.0 发布                | 1 周     | docs.applet.dev 上线，npm 正式版         |
 
 > 总计约 **9 周** 可达成 v1.0（覆盖 weapp/h5/alipay/tt 四端）。
 
@@ -337,4 +331,3 @@ basic-react/
 > 1. 主框架：Taro + React + TypeScript
 > 2. v1.0 平台范围：微信 / H5 / 支付宝 / 抖音
 > 3. 仓库组织：pnpm monorepo
-

@@ -9,16 +9,16 @@ description: Maintain the applet project's PM workspace (pm/) — roadmap, risks
 
 ## 目录速查
 
-| 路径                       | 用途                                                  |
-| -------------------------- | ----------------------------------------------------- |
-| `pm/README.md`             | PM 空间总览与流程                                      |
-| `pm/roadmap.md`            | 里程碑 M0~M7 跟踪                                     |
-| `pm/risks.md`              | 风险登记册 + 待决策点                                  |
-| `pm/backlog.md`            | Now / Next / Later 需求池                              |
-| `pm/changelog.md`          | 项目级变更日志                                         |
-| `pm/decisions/`            | ADR（架构决策记录）                                    |
-| `pm/rfcs/`                 | RFC（变更提案）                                        |
-| `pm/templates/`            | ADR / RFC / 复盘模板                                   |
+| 路径              | 用途                      |
+| ----------------- | ------------------------- |
+| `pm/README.md`    | PM 空间总览与流程         |
+| `pm/roadmap.md`   | 里程碑 M0~M7 跟踪         |
+| `pm/risks.md`     | 风险登记册 + 待决策点     |
+| `pm/backlog.md`   | Now / Next / Later 需求池 |
+| `pm/changelog.md` | 项目级变更日志            |
+| `pm/decisions/`   | ADR（架构决策记录）       |
+| `pm/rfcs/`        | RFC（变更提案）           |
+| `pm/templates/`   | ADR / RFC / 复盘模板      |
 
 > 只有当用户明确要求新增 `meetings/` 时才创建会议纪要目录。
 
