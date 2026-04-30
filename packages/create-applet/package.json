@@ -1,0 +1,31 @@
+{
+  "name": "create-applet",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Scaffold applet multi-platform mini-program projects (MVP)",
+  "type": "module",
+  "bin": {
+    "create-applet": "./bin/create-applet.mjs"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "templates"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.build.json --noEmit",
+    "start": "node bin/create-applet.mjs"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^7.3.2",
+    "commander": "^13.1.0",
+    "ejs": "^3.1.10",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/ejs": "^3.1.5",
+    "@types/node": "^22.13.1",
+    "typescript": "^5.7.3"
+  }
+}

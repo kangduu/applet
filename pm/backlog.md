@@ -6,16 +6,15 @@
 
 ## Now（本周聚焦）
 
-> 上周期三项 P0（monorepo / 全局规范包 / CI）已归档至 `changelog.md`「Unreleased」。当前暂无新的 **Now** 条目，请从 **Next** 拉取下一批工作。
+> `create-applet` CLI MVP 已完成；建议将 **Next** 首条 `basic-react` 模板提升为本周期焦点。
 
 ## Next（下一阶段）
 
-| 优先级 | 描述                                   | 估时 | 关联 | 状态      |
-| ------ | -------------------------------------- | ---- | ---- | --------- |
-| P0     | `create-applet` CLI MVP（交互 + 渲染） | S3   | M1   | `Pending` |
-| P0     | `basic-react` 模板：weapp / h5 跑通    | S3   | M1   | `Pending` |
-| P0     | `@applet/request` 包                   | S2   | M2   | `Pending` |
-| P0     | `@applet/auth` 包                      | S2   | M2   | `Pending` |
+| 优先级 | 描述                                | 估时 | 关联 | 状态      |
+| ------ | ----------------------------------- | ---- | ---- | --------- |
+| P0     | `basic-react` 模板：weapp / h5 跑通 | S3   | M1   | `Pending` |
+| P0     | `@applet/request` 包                | S2   | M2   | `Pending` |
+| P0     | `@applet/auth` 包                   | S2   | M2   | `Pending` |
 
 ## Later（远期）
 

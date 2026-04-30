@@ -18,10 +18,12 @@
 - ADR-0001：技术栈锁定 Taro + React + TypeScript。
 - ADR-0002：仓库采用 pnpm monorepo 组织。
 - ADR-0003：v1.0 平台范围确定为 weapp / h5 / alipay / tt。
+- `create-applet` CLI MVP：交互式 prompts（@inquirer/prompts）、EJS 渲染、`minimal` 模板落盘；支持 `-y` / `--platforms` / `--pm` / `--no-git`。
 
 ### Changed
 
-- `pm/backlog.md`：本周完成的三项 P0 自 **Now** 移除并记入此处。
+- `pm/backlog.md`：`create-applet` CLI MVP 自 **Next** 移除；**Now** 指引切至 `basic-react` 模板。
+- `pm/backlog.md`：M0 周期三项 P0 自 **Now** 移除并已记入此处。
 
 ## [2026-04-30] v0.2 草案
 

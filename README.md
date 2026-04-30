@@ -116,10 +116,10 @@
 
 ✅ **已确认**：仓库采用 **monorepo（pnpm workspace）** 组织：
 
-- `packages/cli`：脚手架核心
-- `packages/create-applet`：`npm init` 入口
-- `templates/`\*：各类模板
-- `packages/*`：可复用业务能力包
+- `packages/cli`：脚手架核心（规划中）
+- `packages/create-applet`：可执行脚手架 `create-applet`（**MVP 已落地**：`minimal` 模板 + 交互 / EJS）
+- `templates/`：各场景模板（仓库根目录占位；当前内置模板随 `create-applet` 发布）
+- `packages/*`：可复用业务能力包（逐个落地中）
 
 ---
 
@@ -127,17 +127,27 @@
 
 ### 5.1 使用方式
 
+**本仓库开发（需先构建 CLI）：**
+
+```bash
+pnpm run build
+pnpm run create-applet -- my-app -y --pm pnpm --platforms weapp,h5
+# 或非交互：同上；交互式不传 -y 即可
+```
+
+**设计目标（npm 发布后）：**
+
 ```bash
 # 交互式
 npx create-applet@latest my-app
 
-# 直接指定参数
+# 直接指定参数（当前 MVP 仅支持 minimal + react）
 npx create-applet@latest my-app \
-  --template ecommerce \
+  --template minimal \
   --framework react \
   --platforms weapp,h5,alipay \
-  --ui nutui \
-  --pm pnpm
+  --pm pnpm \
+  -y
 ```
 
 ### 5.2 交互流程（伪代码）
@@ -224,14 +234,15 @@ const answers = await prompt([
 ```
 applet/
 ├── packages/
-│   ├── cli/                       # 脚手架核心实现
-│   ├── create-applet/             # npm init 入口
-│   ├── request/                   # 网络请求封装
-│   ├── auth/                      # 登录/鉴权
-│   ├── tracker/                   # 埋点
-│   ├── ui-kit/                    # 自定义组件库
-│   ├── utils/                     # 通用工具
-│   └── config/                    # 共享 eslint/ts/prettier 配置
+│   ├── cli/                       # 脚手架核心实现（规划中）
+│   ├── create-applet/             # create-applet CLI（MVP：`minimal` 模板）
+│   ├── types/                     # 占位 TS 包（工程化占位）
+│   ├── config/                    # 共享 eslint / prettier / commitlint（@applet/config）
+│   ├── request/                   # 网络请求封装（规划中）
+│   ├── auth/                      # 登录/鉴权（规划中）
+│   ├── tracker/                   # 埋点（规划中）
+│   ├── ui-kit/                    # 自定义组件库（规划中）
+│   └── utils/                     # 通用工具（规划中）
 ├── templates/
 │   ├── basic-react/               # React 基础模板
 │   ├── basic-vue/                 # Vue 基础模板
@@ -319,7 +330,7 @@ basic-react/
 
 ## 协作
 
-- **项目管理工件**统一放在 [`pm/`](./pm/README.md)：里程碑（`pm/roadmap.md`）、风险（`pm/risks.md`）、决策（`pm/decisions/`）、提案（`pm/rfcs/`）、需求池（`pm/backlog.md`）。
+- **项目管理工件**统一放在 `[pm/](./pm/README.md)`：里程碑（`pm/roadmap.md`）、风险（`pm/risks.md`）、决策（`pm/decisions/`）、提案（`pm/rfcs/`）、需求池（`pm/backlog.md`）。
 - 提案变更请基于 `pm/templates/rfc.md` 在 `pm/rfcs/` 下提交 PR；评审通过后落地为 ADR（`pm/decisions/`）。
 - 任何实现以本 README 的方案为准；调整需同步更新本文件。
 - AI Agent 协助维护 PM 工件时，请遵循 `.cursor/skills/pm-workflow/SKILL.md`。

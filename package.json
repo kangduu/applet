@@ -9,6 +9,7 @@
     "format:check": "prettier . --check",
     "typecheck": "pnpm -r run typecheck",
     "build": "pnpm -r run build",
+    "create-applet": "node ./packages/create-applet/bin/create-applet.mjs",
     "prepare": "husky"
   },
   "lint-staged": {
