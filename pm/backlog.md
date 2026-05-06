@@ -6,7 +6,7 @@
 
 ## Now（本周聚焦）
 
-> `create-applet` CLI MVP 已完成；建议将 **Next** 首条 `basic-react` 模板提升为本周期焦点。
+> `create-applet` CLI MVP 已完成；优先推进 **Next** 首条 `basic-react`。业务能力模块化已写入 `pm/modules.md` 与 ADR-0004，落地节奏见 **Later** 中模块化条目。
 
 ## Next（下一阶段）
 
@@ -18,16 +18,18 @@
 
 ## Later（远期）
 
-| 优先级 | 描述                  | 估时 | 关联 | 状态      |
-| ------ | --------------------- | ---- | ---- | --------- |
-| P1     | UI 组件库选型与封装层 | S3   | M3   | `Pending` |
-| P1     | 支付宝 / 抖音端冒烟   | S3   | M4   | `Pending` |
-| P1     | 业务模板：ecommerce   | S4   | M5   | `Pending` |
-| P1     | 业务模板：content     | S3   | M5   | `Pending` |
-| P1     | 业务模板：admin       | S3   | M5   | `Pending` |
-| P2     | 国际化 / 主题切换     | S2   | M6   | `Pending` |
-| P2     | 埋点 / 监控接入       | S3   | M6   | `Pending` |
-| P2     | 文档站（VitePress）   | S3   | M7   | `Pending` |
+| 优先级 | 描述                                                      | 估时 | 关联 | 状态      |
+| ------ | --------------------------------------------------------- | ---- | ---- | --------- |
+| P1     | UI 组件库选型与封装层                                     | S3   | M3   | `Pending` |
+| P1     | 支付宝 / 抖音端冒烟                                       | S3   | M4   | `Pending` |
+| P1     | 业务模板：ecommerce                                       | S4   | M5   | `Pending` |
+| P1     | 业务模板：content                                         | S3   | M5   | `Pending` |
+| P1     | 业务模板：admin                                           | S3   | M5   | `Pending` |
+| P2     | 国际化 / 主题切换                                         | S2   | M6   | `Pending` |
+| P2     | 埋点 / 监控接入                                           | S3   | M6   | `Pending` |
+| P2     | RFC：模块依赖规则、semver、首批域与包名冻结（承接 D-005） | S2   | RFC  | `Pending` |
+| P2     | `create-applet` 支持可选业务模块 / 依赖写入（CLI 演进）   | S3   | M1+  | `Pending` |
+| P2     | 文档站（VitePress）                                       | S3   | M7   | `Pending` |
 
 ## 流转约定
 

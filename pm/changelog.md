@@ -8,7 +8,7 @@
 
 ### Added
 
-- pnpm workspace monorepo 骨架（`pnpm-workspace.yaml`、`packages/*`、`templates/*`）。
+- pnpm workspace monorepo 骨架（`pnpm-workspace.yaml`、`packages/`_、`templates/`_）。
 - `@applet/config`：共享 ESLint（flat）/ Prettier / Commitlint 配置。
 - `@applet/types`：占位 TypeScript 包，用于接通 `typecheck` / `build`。
 - GitHub Actions CI：并行执行 `lint`、`format:check`、`typecheck`、`build`。
@@ -19,9 +19,16 @@
 - ADR-0002：仓库采用 pnpm monorepo 组织。
 - ADR-0003：v1.0 平台范围确定为 weapp / h5 / alipay / tt。
 - `create-applet` CLI MVP：交互式 prompts（@inquirer/prompts）、EJS 渲染、`minimal` 模板落盘；支持 `-y` / `--platforms` / `--pm` / `--no-git`。
+- ADR-0004：业务能力按业务域模块化（`@applet/*` + 薄模板）。
+- `pm/modules.md`：业务能力模块化运行清单（域表、分层、命名约定、与里程碑对齐）。
 
 ### Changed
 
+- `pm/roadmap.md`：v1.0 总目标对齐模块化叙事；M2/M5 **备注** 与 ADR-0004 挂钩。
+- `pm/backlog.md`：**Later** 增加模块化 RFC 与 CLI 演进条目；**Now** 说明与 `modules.md` 联动。
+- `pm/README.md`：目录增加 `modules.md`；工作流增加模块化维护步骤。
+- `pm/risks.md`：新增 R-008、D-005。
+- `pm/decisions/README.md`：索引增加 ADR-0004。
 - `pm/backlog.md`：`create-applet` CLI MVP 自 **Next** 移除；**Now** 指引切至 `basic-react` 模板。
 - `pm/backlog.md`：M0 周期三项 P0 自 **Now** 移除并已记入此处。
 

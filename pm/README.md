@@ -6,16 +6,17 @@
 
 ## 目录结构
 
-| 路径           | 用途                                        |
-| -------------- | ------------------------------------------- |
-| `roadmap.md`   | 里程碑（M0~M7）跟踪表，含状态、负责人、备注 |
-| `risks.md`     | 风险登记册（影响 / 概率 / 缓解措施 / 状态） |
-| `backlog.md`   | 需求池与待办（Now / Next / Later）          |
-| `changelog.md` | 项目级变更日志（与代码 CHANGELOG 区分）     |
-| `decisions/`   | ADR（架构决策记录）— 一次决策一文件         |
-| `rfcs/`        | RFC（变更提案）— 提案先行，落地后归档       |
-| `meetings/`    | 会议纪要（可选，按 `YYYY-MM-DD-topic.md`）  |
-| `templates/`   | ADR / RFC / 复盘模板                        |
+| 路径           | 用途                                                       |
+| -------------- | ---------------------------------------------------------- |
+| `modules.md`   | **业务能力模块化**运行清单（域划分、包命名、与里程碑对齐） |
+| `roadmap.md`   | 里程碑（M0~M7）跟踪表，含状态、负责人、备注                |
+| `risks.md`     | 风险登记册（影响 / 概率 / 缓解措施 / 状态）                |
+| `backlog.md`   | 需求池与待办（Now / Next / Later）                         |
+| `changelog.md` | 项目级变更日志（与代码 CHANGELOG 区分）                    |
+| `decisions/`   | ADR（架构决策记录）— 一次决策一文件                        |
+| `rfcs/`        | RFC（变更提案）— 提案先行，落地后归档                      |
+| `meetings/`    | 会议纪要（可选，按 `YYYY-MM-DD-topic.md`）                 |
+| `templates/`   | ADR / RFC / 复盘模板                                       |
 
 ## 工作流概览
 
@@ -36,8 +37,7 @@
 3. **进入排期** → 更新 `roadmap.md` 的对应里程碑或新增条目。
 4. **识别风险** → 同步登记到 `risks.md`，并在 ADR 中链回。
 5. **落地完成** → 更新 `changelog.md`，必要时在 `meetings/` 写复盘。
-
-## 命名约定
+6. **业务能力模块化（持续）** → 运行清单见 [`modules.md`](./modules.md)，决策见 [ADR-0004](./decisions/0004-business-capability-modules.md)；域表或包名变更请同步 `changelog.md`。
 
 - ADR：`decisions/NNNN-kebab-case-title.md`，编号四位数字递增（`0001`、`0002`…）
 - RFC：`rfcs/NNNN-kebab-case-title.md`，编号独立递增
