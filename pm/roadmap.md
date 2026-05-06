@@ -6,7 +6,7 @@
 
 ## v1.0 总目标
 
-> 交付一个可一键生成 **微信 / H5 / 支付宝 / 抖音** 四端工程的 CLI + 多业务模板，覆盖工程化基线与核心业务能力。
+> 交付可一键生成 **微信 / H5 / 支付宝 / 抖音** 四端工程的 CLI + 多业务模板；并将**市场常见能力**按业务域沉淀为 **`@applet/*` 模块**，使不同小程序项目通过**薄模板 + 依赖组合**快速实现同款能力（运行清单见 `pm/modules.md`，决策见 ADR-0004）。
 
 ## 里程碑跟踪表
 
@@ -14,10 +14,10 @@
 | --- | -------------------------------------------- | -------- | ------------- | ------ | -------- | ---------------------------------------- | -------------------------------------------------------------------------------------------- |
 | M0  | 仓库初始化 & monorepo 骨架                   | 0.5 周   | `In Progress` | TBD    | TBD      | pnpm workspace、CI、文档站雏形           | 已完成 workspace、`@applet/config`、`@applet/types`、GitHub Actions CI；**文档站雏形未启动** |
 | M1  | CLI MVP + `basic-react` 模板                 | 1.5 周   | `In Progress` | TBD    | TBD      | `npx create-applet` 可用，weapp/h5 跑通  | CLI MVP 已合入（`minimal` 模板）；**Taro `basic-react` 未完成**                              |
-| M2  | 工程化基线 + 共享包（request / auth）        | 1 周     | `Not Started` | TBD    | TBD      | 封装完成，模板接入                       |                                                                                              |
+| M2  | 工程化基线 + 共享包（request / auth）        | 1 周     | `Not Started` | TBD    | TBD      | 封装完成，模板接入                       | **模块化底座**：与 ADR-0004 基础层一致，供业务域包依赖                                       |
 | M3  | UI 组件库接入 + 多端适配验证                 | 1 周     | `Not Started` | TBD    | TBD      | NutUI/Taroify 按平台切换，样式一致性测试 |                                                                                              |
 | M4  | 扩展平台：alipay + tt（v1.0 全部 P0 端到位） | 1 周     | `Not Started` | TBD    | TBD      | 四端（weapp / h5 / alipay / tt）冒烟通过 |                                                                                              |
-| M5  | 业务模板：ecommerce / content / admin        | 2 周     | `Not Started` | TBD    | TBD      | 三类业务模板完成                         |                                                                                              |
+| M5  | 业务模板：ecommerce / content / admin        | 2 周     | `Not Started` | TBD    | TBD      | 三类业务模板完成                         | 模板以 **模块组合 + 壳页面** 为主（`pm/modules.md` §5），避免业务实现散落模板                |
 | M6  | 监控 / 埋点 / 国际化等可选能力               | 1 周     | `Not Started` | TBD    | TBD      | 通过 CLI flag 一键启用                   |                                                                                              |
 | M7  | 文档站 + 视频教程 + v1.0 发布                | 1 周     | `Not Started` | TBD    | TBD      | docs.applet.dev 上线，npm 正式版         |                                                                                              |
 

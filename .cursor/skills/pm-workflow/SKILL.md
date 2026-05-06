@@ -1,6 +1,7 @@
 ---
 name: pm-workflow
-description: Maintain the applet project's PM workspace (pm/) — roadmap, risks, backlog, ADRs, RFCs, and changelog. Use when the user asks to add or update a milestone, risk, backlog item, decision (ADR), proposal (RFC), retrospective, or anything under pm/, or when you finish significant work that needs to be reflected in pm/ artifacts.
+description: >-
+  Maintain the applet project's PM workspace (pm/) — roadmap, risks, backlog, ADRs, RFCs, changelog, and business capability modules (`pm/modules.md`). Use when the user asks to add or update a milestone, risk, backlog item, decision (ADR), proposal (RFC), retrospective, modular capability plan, or anything under pm/, or when you finish significant work that needs to be reflected in pm/ artifacts.
 ---
 
 # PM Workflow — applet 项目管理工件维护
@@ -12,6 +13,7 @@ description: Maintain the applet project's PM workspace (pm/) — roadmap, risks
 | 路径              | 用途                      |
 | ----------------- | ------------------------- |
 | `pm/README.md`    | PM 空间总览与流程         |
+| `pm/modules.md`   | 业务能力模块化运行清单    |
 | `pm/roadmap.md`   | 里程碑 M0~M7 跟踪         |
 | `pm/risks.md`     | 风险登记册 + 待决策点     |
 | `pm/backlog.md`   | Now / Next / Later 需求池 |

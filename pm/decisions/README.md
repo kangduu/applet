@@ -9,6 +9,7 @@
 | 0001 | [技术栈：Taro + React + TypeScript](./0001-tech-stack-taro-react.md)    | Accepted | 2026-04-30 |
 | 0002 | [仓库组织：pnpm monorepo](./0002-monorepo-pnpm-workspace.md)            | Accepted | 2026-04-30 |
 | 0003 | [v1.0 平台范围：weapp / h5 / alipay / tt](./0003-v1-platforms-scope.md) | Accepted | 2026-04-30 |
+| 0004 | [业务能力按业务域模块化](./0004-business-capability-modules.md)         | Accepted | 2026-05-06 |
 
 ## 新增 ADR 流程
 
